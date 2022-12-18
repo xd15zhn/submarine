@@ -17,9 +17,11 @@ SubmarineXZ::SubmarineXZ(Simulator *sim, std::string name) {
     sim->connectU(intVx, sumS1);
     sim->connectU(intVz, sumS1);
     sim->connectU(intEy, sumS1);
+    sim->connectU(ganFi, sumS1);
     sumS1->Set_InputGain(-10.1, 0);
     sumS1->Set_InputGain(-37.8, 1);
     sumS1->Set_InputGain(37.5, 2);
+    sumS1->Set_InputGain(1, 3);
     sim->connectU(intVz, sumS2);
     sim->connectU(intWy, sumS2);
     sim->connectU(ganEa, sumS2);
